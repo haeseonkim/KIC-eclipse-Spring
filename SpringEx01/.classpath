@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-aop-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-aspects-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-beans-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-context-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-context-indexer-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-context-support-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-core-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-expression-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-instrument-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-jcl-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-jdbc-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-jms-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-messaging-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-orm-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-oxm-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-test-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-tx-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-web-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-webflux-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-webmvc-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Java/APIs - Spring/spring-websocket-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
