@@ -21,7 +21,7 @@ public class ModifyAction implements Controller {
 		to.setSeq(seq);	
 		
 		BoardDAO dao = new BoardDAO();
-		to = dao.boardView(to);
+		to = dao.boardModify(to);
 		
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("board_modify1");
