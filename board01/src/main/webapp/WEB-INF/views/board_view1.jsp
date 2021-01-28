@@ -7,7 +7,6 @@
 <%@page import="java.util.ArrayList"%>
 
 <%
-	// 하나만 가져오니까 if문 사용
 	BoardTO to = (BoardTO)request.getAttribute("to");
 
 	String subject = to.getSubject();
