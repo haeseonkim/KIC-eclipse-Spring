@@ -27,7 +27,7 @@
 		sbHtml.append("		<td>&nbsp;</td>");
 		sbHtml.append("		<td>"+ seq +"</td>");
 		sbHtml.append("		<td class='left'>");
-		sbHtml.append(			"<a href='view.spring?seq=" + seq + "'> "+ subject + "</a>&nbsp;");
+		sbHtml.append(			"<a href='view.do?seq=" + seq + "'> "+ subject + "</a>&nbsp;");
 		if(wgap == 0){
 			sbHtml.append(			"<img src='resources/images/icon_hot.gif' alt='HOT'></td>");
 		}

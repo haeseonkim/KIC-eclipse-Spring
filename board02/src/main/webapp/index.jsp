@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<li><a href="list.do">list.do</a></li>
+<li><a href="list.spring">list.spring</a></li>
 </body>
 </html>
