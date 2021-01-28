@@ -8,15 +8,9 @@
 
 
 <%
-	request.setCharacterEncoding("utf-8");
-	String seq = request.getParameter("seq");
+	BoardTO to = (BoardTO)request.getAttribute("to");
 	
-	BoardTO to = new BoardTO();
-	to.setSeq(seq);
-	
-	BoardDAO dao = new BoardDAO();
-	to = dao.boardView(to);
-	
+	String seq = to.getSeq();
 	String subject = to.getSubject();
 	String writer = to.getWriter();
 %>

@@ -5,14 +5,8 @@
 <%@ page import="model1.BoardDAO" %>
 
 <%
-	request.setCharacterEncoding("utf-8");
 	
-	BoardTO to = new BoardTO();
-	to.setSeq(request.getParameter("seq"));
-	to.setPassword(request.getParameter("password"));
-	
-	BoardDAO dao = new BoardDAO();
-	int flag = dao.boardDeleteOk(to);
+	int flag = (Integer)request.getAttribute("flag");
 	
 	out.println("<script type='text/javascript'>");
 	if(flag == 0){

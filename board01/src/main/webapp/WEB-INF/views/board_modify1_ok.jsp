@@ -5,22 +5,7 @@
 <%@ page import="model1.BoardDAO" %>
 
 <%
-	request.setCharacterEncoding("utf-8");
-
-	BoardTO to = new BoardTO();
-	to.setSeq(request.getParameter("seq"));
-	to.setPassword(request.getParameter("password"));
-	
-	to.setSubject(request.getParameter("subject"));
-	// 필수 입력 항목이 아닌 경우
-	to.setMail("");
-	if(!request.getParameter("mail1").equals("") && !request.getParameter("mail2").equals("")){
-		to.setMail(request.getParameter("mail1") + "@" + request.getParameter("mail2"));
-	}
-	to.setContent(request.getParameter("content"));
-	
-	BoardDAO dao = new BoardDAO();
-	int flag = dao.boardModifyOk(to);
+	int flag = (Integer)request.getAttribute("flag");
 	
 	out.println("<script type='text/javascript'>");
 	if(flag == 0){
@@ -35,4 +20,3 @@
 	}
 	out.println("</script>");
 %>
->
