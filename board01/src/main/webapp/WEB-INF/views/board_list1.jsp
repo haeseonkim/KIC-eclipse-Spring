@@ -8,8 +8,8 @@
 
 
 <%
-	BoardDAO dao = new BoardDAO();
-	ArrayList<BoardTO> lists = dao.boardList();
+	
+	ArrayList<BoardTO> lists = (ArrayList<BoardTO>)request.getAttribute("lists");
 	
 	int totalRecord = lists.size();
 	
