@@ -7,15 +7,9 @@
 <%@page import="java.util.ArrayList"%>
 
 <%
-	request.setCharacterEncoding("utf-8");
-
-	BoardTO to = new BoardTO();
-	to.setSeq(request.getParameter("seq"));
-	
-	BoardDAO dao = new BoardDAO();
-	to = dao.boardView(to);
-	
 	// 하나만 가져오니까 if문 사용
+	BoardTO to = (BoardTO)request.getAttribute("to");
+
 	String subject = to.getSubject();
 	String writer = to.getWriter();
 	String mail = to.getMail();
