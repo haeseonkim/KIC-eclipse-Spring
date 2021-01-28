@@ -20,7 +20,7 @@ public class DeleteAction implements Controller {
 		to.setSeq(seq);
 		
 		BoardDAO dao = new BoardDAO();
-		to = dao.boardView(to);
+		to = dao.boardDelete(to);
 		
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("board_delete1");
