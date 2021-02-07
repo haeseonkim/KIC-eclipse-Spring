@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis">
+	<!-- list -->
+	<select id="list" resultType="com.exam.model1.BoardTO">  
+		select seq, subject, writer, date_format(wdate, '%Y-%m-%d') wdate, hit, datediff(now(), wdate) wgap, filename, cmt 
+		from album_board1 
+		order by seq desc
+	</select>
+	
+	<!-- view -->
+	<select id="view" parameterType="com.exam.model1.BoardTO" resultType="com.exam.model1.BoardTO">
+		select seq, subject, writer, mail, wip, wdate, hit, content, filename, longitude, latitude, cmt 
+		from album_board1 
+		where seq=#{seq}
+	</select>
+	<update id="view_hit" parameterType="com.exam.model1.BoardTO">
+		update album_board1 set hit=hit+1 
+		where seq=#{seq}
+	</update>
+	
+	<!-- comment list -->
+	<select id="clist" parameterType="com.exam.model1.BoardTO" resultType="com.exam.model1.CommentTO">  
+		select seq, writer, content, wdate
+		from album_comment1 
+		where pseq=#{seq}
+		order by seq desc
+	</select>
+	<!-- comment write_ok -->
+	<insert id="cwrite_ok" parameterType="com.exam.model1.CommentTO">
+		insert album_comment1 values(0, #{pseq}, #{writer}, #{password}, #{content}, now())
+	</insert>
+	<update id="comment_update" parameterType="com.exam.model1.CommentTO">
+		update album_board1 set cmt=cmt+1 
+		where seq=#{pseq}
+	</update>
+	
+	
+	<!-- write_ok -->
+	<insert id="write_ok" parameterType="com.exam.model1.BoardTO">
+		insert album_board1 values(0, #{subject}, #{writer}, #{mail}, #{password}, #{content}, #{filename}, #{filesize}, #{longitude}, #{latitude}, 0, 0, #{wip}, now())
+	</insert>
+	
+	<!-- modify -->
+	<select id="modify" parameterType="com.exam.model1.BoardTO" resultType="com.exam.model1.BoardTO">
+		select seq, subject, writer, content, mail, filename, latitude, longitude
+		from album_board1 
+		where seq=#{seq}
+	</select>
+	
+	<!-- modify_ok -->
+	<update id="modify_ok" parameterType="com.exam.model1.BoardTO">
+		update album_board1 set subject = #{subject}, mail=#{mail}, content=#{content}, filename=#{filename}, latitude=#{latitude}, longitude=#{longitude}
+		where seq=#{seq} and password=#{password}
+	</update>
+	
+	<!-- delete -->
+	<select id="delete" parameterType="com.exam.model1.BoardTO" resultType="com.exam.model1.BoardTO">
+		select seq, subject, writer 
+		from album_board1 
+		where seq=#{seq}
+	</select>
+	
+	<!-- delete_ok -->
+	<delete id="delete_ok" parameterType="com.exam.model1.BoardTO">
+		delete from album_board1 
+		where seq=#{seq} and password=#{password}
+	</delete>
+</mapper>
